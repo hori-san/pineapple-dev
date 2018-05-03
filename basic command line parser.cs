@@ -12,9 +12,18 @@ namespace Basic_Command_Parser
         {
             Console.WriteLine("Welcome to test console app, type help to get some help!");
 
+
+
             while (true)
             {
-                #region etc
+                parseCommand(Console.ReadLine());
+                
+            }   
+        }
+
+        static void parseCommand(string input)
+        {
+            #region etc
                 string input = Console.ReadLine();
 
                 int commandEndIndex = input.IndexOf(' ');
@@ -78,7 +87,6 @@ namespace Basic_Command_Parser
                     #endregion
                 }
                 #endregion
-            }
         }
 
         static void ShowHelp()
